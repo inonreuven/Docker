@@ -3,11 +3,23 @@
   
 ## Contents
 1. Objective
-2.
+2. step-by-step guide
 
 ### 1.Objective
 
-This project aims to:
-1. Provide step-by-step guide for docker countiners.
-2. Develop a **handwritten digit classifier** on [MNIST dataset](http://yann.lecun.com/exdb/mnist/) 
+This project aims to provide **step-by-step guide** for docker countiners.
+
+### 3. step-by-step
+
+**1. pulling mongoDB and mongo-express official images** 
+
+1. Use [Docker hub](https://hub.docker.com/search?q=mongo) to search for mongoDB and mongo-express images.
+2. pulling the images command: 
+```docker pull mongo```
+and
+```docker pull mongo-express```
+
+
+
+
 
