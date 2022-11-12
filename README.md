@@ -43,9 +43,7 @@ b. setting up the password - ```-e MONGO_INITDB_ROOT_PASSWORD=password```
 
 the ```-e``` stands for environment variables.
 Command syntax:
-```
-docker run -p 27017:27017 -d -e -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo
-```
+```docker run -p 27017:27017 -d -e -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo```
 
 
 
