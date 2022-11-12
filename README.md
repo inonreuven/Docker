@@ -18,8 +18,9 @@ This project aims to provide **step-by-step guide** for docker countiners.
 ```docker pull mongo```
 and
 ```docker pull mongo-express```
-3. Running mongoDB and mongo-express countiners in order to make the mongoDB database available to application and also to connect mongo-express to mongoDB countiner:
+**2. Running mongoDB and mongo-express countiners** 
 
+Steps to make the mongoDB database available to the application and also to connect mongo-express to mongoDB countiner:  
 **- mongoDB and mongo-express connection** - The connection is done with *Isolated Docker Network* which the docker creates to run the countiners. inside the network we can run the mongoDB and mongo-express and the countiners will comunicate with the countiner name. The application outside of the network on the host, will comunicate with the local host port number. 
 create docker network named *mongo-network*
 ```
