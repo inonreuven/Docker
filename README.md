@@ -31,11 +31,11 @@ create docker network named *mongo-network*
 docker network create mongo-network
 ```
 
-**- Run mongo countiners**
+**- Run mongo countiner**
 
 The ```docker run mongo``` command starts the container from an image. The MongoDB server in the image listens on the standard MongoDB port *27017* inside of a countiner (MongoDB ref) [https://hub.docker.com/_/mongo] and the host will use the same port ```docker run -p 27017:27017 -d```.
 
-**- Environment variables**
+- Environment variables:
 
 adjust the initialization of the MongoDB instance by passing one or more environment variables on the ```docker run``` command line
 a. setting up the username - ```-e MONGO_INITDB_ROOT_USERNAME=admin```
@@ -45,13 +45,27 @@ the ```-e``` stands for environment variables.
 Command syntax:
 ```docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo```
 
-**- Countiner name and docker network**
+- Countiner name and docker network:
 
 Configure the *countiner name* to connect with the mongo express ```--name mongodb``` and the network that we created ```--net mongo-network```.
 Command syntax:
 ```
 docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo
 ```
+
+**- Run mongo-express countiner**
+
+To connect the *mongo-express* countainer to the *mongodb* container on startup (mongo-express ref) [https://hub.docker.com/_/mongo-express]:
+a. Use the username and password  of the MongoDB countiner - ```-e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password``` 
+b. Use the MongoDB countainer name to config the server  ```-e ME_CONFIG_MONGODB_SERVER=mongodb``` 
+
+
+
+
+
+
+
+
 
 
 
