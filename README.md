@@ -27,7 +27,17 @@ create docker network named *mongo-network*
 docker network create mongo-network
 ```
 **- Run mongo countiners**
-The ```docker run mongo``` command starts the container from an image. The MongoDB server in the image listens on the standard MongoDB port *27017* inside of a countiner (MongoDB ref) [https://hub.docker.com/_/mongo] and the host will use the same port ```docker run -p 27017:27017 -d```    
+The ```docker run mongo``` command starts the container from an image. The MongoDB server in the image listens on the standard MongoDB port *27017* inside of a countiner (MongoDB ref) [https://hub.docker.com/_/mongo] and the host will use the same port ```docker run -p 27017:27017 -d```.
+**- environment variables**
+adjust the initialization of the MongoDB instance by passing one or more environment variables on the ```docker run``` command line
+a. setting up the username - ```-e MONGO_INITDB_ROOT_USERNAME=admin```
+b. setting up the password - ```-e MONGO_INITDB_ROOT_PASSWORD=password```
+
+the ```-e``` stands for environment variables.
+Command syntax:
+```
+docker run -p 27017:27017 -d -e -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+```
 
 
 
