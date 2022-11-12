@@ -61,6 +61,18 @@ a. Use the username ```-e ME_CONFIG_MONGODB_ADMINUSERNAME=admin``` and the passw
 
 b. Use the MongoDB countainer name to config the server  ```-e ME_CONFIG_MONGODB_SERVER=mongodb``` 
 
+The command syntax:
+```
+docker run -d^
+-p 8081:8081 
+-e ME_CONFIG_MONGODB_ADMINUSERNAME=admin^
+-e ME_CONFIG_MONGODB_ADMINPASSWORD=password^
+-e ME_CONFIG_MONGODB_SERVER=mongodb^
+--name mongo-express^ 
+--net mongo-network mongo-express^
+mongo-express
+```
+
 
 
 
