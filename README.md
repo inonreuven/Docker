@@ -57,7 +57,8 @@ docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB
 
 To connect the *mongo-express* countainer to the *mongodb* container on startup (mongo-express ref) [https://hub.docker.com/_/mongo-express]:
 
-a. Use the username and password  of the MongoDB countiner - ```-e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password``` 
+a. Use the username and password  of the MongoDB countiner - ```-e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password```
+
 b. Use the MongoDB countainer name to config the server  ```-e ME_CONFIG_MONGODB_SERVER=mongodb``` 
 
 
