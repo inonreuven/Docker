@@ -43,7 +43,16 @@ b. setting up the password - ```-e MONGO_INITDB_ROOT_PASSWORD=password```
 
 the ```-e``` stands for environment variables.
 Command syntax:
-```docker run -p 27017:27017 -d -e -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo```
+```docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo```
+
+**- Countiner name and docker network**
+
+Configure the *countiner name* to connect with the mongo express ```--name mongodb``` and the network that we created ```--net mongo-network```.
+Command syntax:
+```
+docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo
+```
+
 
 
 
