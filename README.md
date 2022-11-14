@@ -4,6 +4,7 @@
 ## Contents
 1. Objective
 2. Step-by-step guide
+3. Docker compose
 
 ### 1.Objective
 
@@ -73,6 +74,8 @@ docker run -d^
 mongo-express
 ```
 
+**3. Docker compose**
+Contains the normal commands and the network
 
 
 
